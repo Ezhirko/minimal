@@ -1,7 +1,6 @@
-title: S.A.Ezhirko
-logo: /assets/img/Ezhirko.jpg
-description: I have a total of 14 years of work experience in software industry.
-
+title: Ezhirko
+logo: /assets/img/logo.png
+description: Minimal is a theme for GitHub Pages.
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal

@@ -1,123 +1,28 @@
 ---
-layout: default
+Data Science Portfolio
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+# AI based log File Analyser
 
-[Link to another page](./another-page.html).
+In this application a NLP Classifier is built by training on several log files which has several issues encountered by the healthcare device. A recomendation system was also developed that is trained with the fixes provided for those issues. In production this application will predict type of error that as arised from the healthcare device and would recommend possible fix that was performed earlier to fix that issue.
 
-There should be whitespace between paragraphs.
+# Automated text report generation for Chest Xray.
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+The Automated Report Generation for Chest Xray Image application generates text reports like the report written by the radiologist for the Chest X ray images. This application is trained on the Chest Xray images and their original reports prepared by radiologist. The application extracts the important features from the X ray images using CNN, and it learns the text report word by word using LSTM. The words in the original report is converted into vectors using word embeddings. A Deep learning model is being created to take X ray images as input and pass it to our trained model. The Model then predicts the report word by word describing the anomalies.
 
-# Header 1
+![](assets/img/ChestXrayResult.jpg)
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+# Multi-Inference Neural Network model that can perform Object detection, depth map and plane surface detection
+This application will predict below 3 outputs for a provided single image.
+1. Object that are present in the images
+2. Depth map of the image
+3. Planar surface in the region
 
-## Header 2
+An single encoder and multi decoder neural network model is developed and trained on images that have objects annotated, ground truth depth map and planar surface details are provided. One of the decoder model is a Yolo V3 archicture. The decoder that detect dept map is taken from MIDAS network and the decoder that detect plane surface is taken from Planar RCNN.
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+[Github link](https://github.com/eva5covergence/EVA5_AI_Projects_new/tree/master/Readme/Session15_CapstoneProject) </br>
+[Youtube](https://www.youtube.com/watch?v=W5vej8zcso8)
 
-### Header 3
+# CT protocol harmonizer
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+Performing clustering on Computed tomography protocols and grouping them to form clusters with similar clinical intent. The challenge is to group the customized protocol for which the machine as to learn the clinical intent. A distance-based clustering algorithm will group the customized protocol based on word frequency and similarity methods like Jaccard similarity was used to pick the clinical intent from Radlex play book which is an internationally accepted CT journal.
